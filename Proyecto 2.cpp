@@ -1,5 +1,5 @@
 //Programa para inventario de productos segun lo que ingrese el usuario
-//Realizado por Marlon Armando López Díaz y José Luis Castillo Virula estudiantes de la universidad Mariano Galvez de Guatemala de la faculta de Ingenieria en Sistemas
+//Realizado por Marlon Armando López Díaz y José Luis Castillo Virula estudiantes de la universidad Mariano Galvez de Guatemala de la facultad de Ingenieria en Sistemas
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -12,7 +12,7 @@ const int MAX_PRODUCTOS = 100; // Limite de productos que el usuario podra ingre
 
 // Estructura que define el producto
 struct Producto {
-    string nombre; // nombre: Nombre del producto
+    string nombre; //Nombre del producto
     string codigo; //Código único del producto
     double precio; //Precio del producto
     string proveedor; //Proveedor del producto
@@ -36,11 +36,11 @@ int cargarProductos(Producto productos[]) {
     file.close();
     return count;
 }
-
+//Verifica si un texto esta dentro de algun producto.
 bool contiene(const string& texto, const string& palabra) {
     return texto.find(palabra) != string::npos;
 }
-
+//Valida si un código ya existe, para no ser repetidos bajo validacion verdadero o falso.
 bool codigoExistente(Producto productos[], int count, const string& codigo) {
     for (int i = 0; i < count; i++) {
         if (productos[i].codigo == codigo) {
@@ -49,7 +49,7 @@ bool codigoExistente(Producto productos[], int count, const string& codigo) {
     }
     return false;
 }
-
+// Agregar producto, el ira incrementado al agregar productos.
 void agregarProducto(Producto productos[], int& count) {
     if (count >= MAX_PRODUCTOS) {
         cout << "No se pueden agregar m?s productos." << endl;
@@ -63,6 +63,7 @@ void agregarProducto(Producto productos[], int& count) {
     cout << "Ingrese el codigo del producto: ";
     cin >> nuevo.codigo;
 
+    //Validación de codigo existente en lista de productos
     if (codigoExistente(productos, count, nuevo.codigo)) {
         cout << "Error: El codigo ya existe." << endl;
         return;
@@ -80,19 +81,19 @@ void agregarProducto(Producto productos[], int& count) {
     cout << "Ingrese el descuento: ";
     cin >> nuevo.descuento;
 
-    productos[count] = nuevo;
+    productos[count] = nuevo; // Agregar un nuevo producto 
     count++;
-    guardarProductos(productos, count);
+    guardarProductos(productos, count); //Guarda el nuevo producto
 }
-
+//Busca productos por código o nombre relacionado
 void buscarProducto(Producto productos[], int count) {
     string criterio;
     cout << "Ingrese el codigo o nombre del producto a buscar: ";
     cin >> criterio;
 
-    bool encontrado = false;
+    bool encontrado = false; //numero de productos actuales
 
-  
+    //Cabecera de la tabla de resultados
     cout << left << setw(15) << "Nombre"
          << setw(15) << "Codigo"
          << setw(15) << "Precio"
@@ -103,10 +104,10 @@ void buscarProducto(Producto productos[], int count) {
 
     for (int i = 0; i < count; i++) {
         if (productos[i].codigo == criterio || contiene(productos[i].nombre, criterio)) {
+            // Muestra el producto encontrado
             cout << left << setw(20) << productos[i].nombre
                  << setw(11) << productos[i].codigo
                  << setw(14)<<productos[i].precio
-                 //<< fixed << setprecision(2) << setw(8) << productos[i].precio
                  << setw(15) << productos[i].proveedor
                  << setw(16) << productos[i].existencia
                  << setw(15) << productos[i].estado
@@ -120,6 +121,7 @@ void buscarProducto(Producto productos[], int count) {
     }
 }
 
+//Modifica el producto en el inventario
 void modificarProducto(Producto productos[], int count) {
     string codigo;
     cout << "Ingrese el codigo del producto a modificar: ";
@@ -127,23 +129,24 @@ void modificarProducto(Producto productos[], int count) {
 
     for (int i = 0; i < count; i++) {
         if (productos[i].codigo == codigo) {
-            cout << "Ingrese el nuevo nombre (actual: " << productos[i].nombre << "): ";
+            cout << "Ingrese el nuevo nombre (actual: " << productos[i].nombre << "): "; //Muestra el nombre actual y solicita ingresar un nuevo nombre
             cin >> productos[i].nombre;
             cin.ignore();
             getline (cin, productos[i].nombre);
-            cout << "Ingrese el nuevo precio (actual: " << productos[i].precio << "): ";
+            cout << "Ingrese el nuevo precio (actual: " << productos[i].precio << "): "; // Muestra precio actual y solicita ingresar un nuevo precio
             cin >> productos[i].precio;
-            cout << "Ingrese el nuevo proveedor (actual: " << productos[i].proveedor << "): ";
+            cout << "Ingrese el nuevo proveedor (actual: " << productos[i].proveedor << "): "; // Muestra proveedor actual y solicita ingresar un nuevo proveedor
             cin >> productos[i].proveedor;
             cin.ignore();
             getline (cin, productos[i].proveedor);
-            cout << "Ingrese la nueva existencia (actual: " << productos[i].existencia << "): ";
+            cout << "Ingrese la nueva existencia (actual: " << productos[i].existencia << "): "; // Muestra la exitencia actual y solicita ingresar un nuevo dato
             cin >> productos[i].existencia;
-            cout << "Ingrese el nuevo estado (A/N) (actual: " << productos[i].estado << "): ";
+            cout << "Ingrese el nuevo estado (A/N) (actual: " << productos[i].estado << "): "; // Muestra el estado y solicita ingresar  en que estado se encuentra
             cin >> productos[i].estado;
-            cout << "Ingrese el nuevo descuento (actual: " << productos[i].descuento << "): ";
+            cout << "Ingrese el nuevo descuento (actual: " << productos[i].descuento << "): "; // Muestra el ultimo descuento y solicita actualizar si posee descuento
             cin >> productos[i].descuento;
 
+            //Guarda producto modificado
             guardarProductos(productos, count);
             cout << "Producto modificado." << endl;
             return;
@@ -153,10 +156,10 @@ void modificarProducto(Producto productos[], int count) {
 }
 
 int main() {
-    Producto productos[MAX_PRODUCTOS];
+    Producto productos[MAX_PRODUCTOS]; 
     int count = cargarProductos(productos);
 
-    int opcion;
+    int opcion; //Función para visualizar menú
     do {
         cout << "\nMenu:" << endl;
         cout << "1. Agregar producto" << endl;
@@ -166,6 +169,7 @@ int main() {
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
+        //Ejecutar la opcion seleccionada
         switch (opcion) {
             case 1:
                 agregarProducto(productos, count);
