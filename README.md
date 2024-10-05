@@ -40,7 +40,7 @@ Al ejecutar el programa, se mostrará un menú principal con las siguientes opci
     6. Especifica la cantidad disponible (existencia).
     7. Indica el estado del producto (A para Aprobado, N para No aprobado).
     8. Si aplica, ingresa el descuento del producto.
-    9. El producto se guardará automáticamente en el archivo productos.csv.
+    9. El producto se guardará automáticamente en el archivo.
  
 ### 2. Buscar Producto
 - Descripción: Permite encontrar un producto existente mediante su código o nombre.
@@ -55,7 +55,7 @@ Al ejecutar el programa, se mostrará un menú principal con las siguientes opci
     1. Selecciona la opción "3. Modificar producto".
     2. Ingresa el código del producto que deseas modificar.
     3. El programa mostrará los atributos actuales del producto y solicitará que ingreses los nuevos valores para cada atributo.
-    4. Los cambios se guardarán automáticamente en el archivo productos.csv.
+    4. Los cambios se guardarán automáticamente en el archivo.
 
 ### 4. Salir
 - Descripción: Cierra el programa.
