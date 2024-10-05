@@ -8,24 +8,25 @@
 
 using namespace std;
 
-const int MAX_PRODUCTOS = 100;
+const int MAX_PRODUCTOS = 100; // Limite de productos que el usuario podra ingresar, sin que se repita el código asignado
 
+// Estructura que define el producto
 struct Producto {
-    string nombre;
-    string codigo;
-    double precio;
-    string proveedor;
-    int existencia;
-    char estado;
-    double descuento;
+    string nombre; // nombre: Nombre del producto
+    string codigo; //Código único del producto
+    double precio; //Precio del producto
+    string proveedor; //Proveedor del producto
+    int existencia; //Cantidad disponible del producto
+    char estado; //Estado del producto (A = Aprobado, N = No aprobado)
+    double descuento; //Descuento aplicable al producto
 };
-
+// Guarda la lista de producto que ingrese el usuario en archivo.dat
 void guardarProductos(Producto productos[], int count) {
     ofstream file("productos.dat", ios::binary);
     file.write(reinterpret_cast<const char*>(productos), count * sizeof(Producto));
     file.close();
 }
-
+// Carga productos al archivo.dat
 int cargarProductos(Producto productos[]) {
     ifstream file("productos.dat", ios::binary);
     int count = 0;
