@@ -28,7 +28,7 @@ Al ejecutar el programa, se mostrará un menú principal con las siguientes opci
 3. Modificar producto: Permite actualizar la información de un producto existente.
 4. Salir: Cierra el programa.
 
-## Funcinalidades 
+## Funcionalidades 
 ###  1. Agregar producto
 - Descripción: Permite ingresar un nuevo producto al inventario.
 - Pasos:
@@ -38,7 +38,7 @@ Al ejecutar el programa, se mostrará un menú principal con las siguientes opci
     4. Proporciona el precio del producto.
     5. Indica el proveedor del producto.
     6. Especifica la cantidad disponible (existencia).
-    7. Indica el estado del producto (A para Activo, N para No disponible).
+    7. Indica el estado del producto (A para Aprobado, N para No aprobado).
     8. Si aplica, ingresa el descuento del producto.
     9. El producto se guardará automáticamente en el archivo productos.csv.
  
