@@ -28,6 +28,8 @@ Al ejecutar el programa, se mostrará un menú principal con las siguientes opci
 3. Modificar producto: Permite actualizar la información de un producto existente.
 4. Salir: Cierra el programa.
 
+https://github.com/Josephcastt/algoritmos-proyecto-2/blob/master/men%C3%BA%20principal.png
+
 ## Funcionalidades 
 ###  1. Agregar producto
 - Descripción: Permite ingresar un nuevo producto al inventario.
