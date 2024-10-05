@@ -66,7 +66,8 @@ https://github.com/Josephcastt/algoritmos-proyecto-2/blob/master/buscar%20produc
   https://github.com/Josephcastt/algoritmos-proyecto-2/blob/master/modificar%20producto.png
   
   ### Ejemplo de producto modificado
-
+  
+  https://github.com/Josephcastt/algoritmos-proyecto-2/blob/master/Producto%20modificado.png
 
 ### 4. Salir
 - Descripción: Cierra el programa.
