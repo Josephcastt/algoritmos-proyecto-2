@@ -43,6 +43,8 @@ https://github.com/Josephcastt/algoritmos-proyecto-2/blob/master/men%C3%BA%20pri
     7. Indica el estado del producto (A para Aprobado, N para No aprobado).
     8. Si aplica, ingresa el descuento del producto.
     9. El producto se guardará automáticamente en el archivo.
+
+https://github.com/Josephcastt/algoritmos-proyecto-2/blob/master/agregar%20producto.png
  
 ### 2. Buscar Producto
 - Descripción: Permite encontrar un producto existente mediante su código o nombre.
