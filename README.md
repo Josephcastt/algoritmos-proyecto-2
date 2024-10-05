@@ -63,6 +63,11 @@ https://github.com/Josephcastt/algoritmos-proyecto-2/blob/master/buscar%20produc
     3. El programa mostrará los atributos actuales del producto y solicitará que ingreses los nuevos valores para cada atributo.
     4. Los cambios se guardarán automáticamente en el archivo.
 
+  https://github.com/Josephcastt/algoritmos-proyecto-2/blob/master/modificar%20producto.png
+  
+  ### Ejemplo de producto modificado
+
+
 ### 4. Salir
 - Descripción: Cierra el programa.
 - Pasos:
