@@ -53,6 +53,8 @@ https://github.com/Josephcastt/algoritmos-proyecto-2/blob/master/agregar%20produ
     2. Introduce el código o nombre del producto que deseas buscar.
     3. El programa mostrará los detalles del producto encontrado. Si no se encuentra, se mostrará un mensaje indicando que el producto no fue encontrado.
 
+https://github.com/Josephcastt/algoritmos-proyecto-2/blob/master/buscar%20producto.png
+
 ### 3. Modificar Producto
 - Descripción: Permite actualizar la información de un producto que ya se encuentra en el inventario.
 - Pasos:
